@@ -14,5 +14,23 @@ int binary_search(int arr[], int left, int right, int key) {
 }
 
 int main() {
-
+    int n, key, ans;
+    printf("Enter the number of elements in array:");
+    scanf("%d", &n);
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter the number you want to search:");
+    scanf("%d", &key);
+    ans= binary_search(arr, 0, n-1, key);
+    if (ans==-1)
+    {
+        printf("Element not found");
+    }
+    else
+    {
+        printf("%d", ans);
+    }
 }
